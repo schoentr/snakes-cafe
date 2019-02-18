@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/schoentr/.local/share/virtualenvs/snakes-cafe-U3U4XYYp/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.enabled": true
+}
