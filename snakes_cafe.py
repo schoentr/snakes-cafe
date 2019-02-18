@@ -54,13 +54,17 @@ order_msg = ''
 item = ''
 # print(item_totals)
 while item != 'quit':
+    # print(item_totals.keys())
     item = input(order_prompt).lower()
-    num = item_totals[item]
-    num += 1
-    item_totals[item] = num
-    if (item_totals[item] == 1):
-        order_msg = f'**   You have 1 order of {item}.   **'
+    if item in item_totals.keys():
+        num = item_totals[item]
+        num += 1
+        item_totals[item] = num
+        if (item_totals[item] == 1):
+            order_msg = f'**   You have 1 order of {item}.   **'
+        else:
+            order_msg = f'**   You have {num} orders of {item}.   **'
     else:
-        order_msg = f'**   You have {num} order of {item}.   **'
-    
-    print(order_msg)
+        order_msg = f'** Sorry we do not have {item} on our menu today.   **'
+    if item != 'quit':
+        print(order_msg)
